@@ -11,8 +11,10 @@ const navLinks = [
   { name: "Home", href: "/" },
   { name: "Destinations", href: "/destinations" },
   { name: "Tours", href: "/tours" },
-  { name: "Login", href: "/login" },
-  { name: "Sign Up", href: "/signup" },
+  { name: "Flights", href: "/flights" },
+  { name: "Hotels", href: "/hotels" },
+  { name: "Blogs", href: "/blogs" },
+  { name: "About Us", href: "/about" },
 ];
 
 export default function HomeNavbar() {
