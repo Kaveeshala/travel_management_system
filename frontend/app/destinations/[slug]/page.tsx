@@ -36,7 +36,7 @@ export default function DestinationDetailsPage({ params }: Props) {
             <img
               src={destination.image}
               alt={destination.name}
-              className="h-[320px] w-full object-cover sm:h-[420px]"
+              className="h-80 w-full object-cover sm:h-105"
             />
 
             <div className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[1.2fr_0.8fr] lg:p-10">
@@ -83,7 +83,7 @@ export default function DestinationDetailsPage({ params }: Props) {
                 </div>
               </div>
 
-              <aside className="rounded-[1.75rem] bg-slate-50 p-6 ring-1 ring-gray-100">
+              <aside className="rounded-sm bg-slate-50 p-6 ring-1 ring-gray-100">
                 <h2 className="text-xl font-semibold text-gray-900">
                   Plan this trip
                 </h2>
