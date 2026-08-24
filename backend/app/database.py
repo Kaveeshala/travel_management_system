@@ -18,9 +18,19 @@ client = AsyncMongoClient(MONGODB_URI)
 database = client[MONGODB_DB_NAME]
 
 
+async def create_database_indexes() -> None:
+    await database.users.create_index(
+        "email",
+        unique=True,
+        name="unique_user_email",
+    )
+    print("MongoDB indexes are ready.")
+
+
 async def connect_to_mongodb() -> None:
     try:
         await client.admin.command("ping")
+        await create_database_indexes()
         print("Connected to MongoDB Atlas successfully.")
     except PyMongoError as error:
         print(f"MongoDB connection failed: {error}")

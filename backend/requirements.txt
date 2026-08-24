@@ -1,4 +1,9 @@
 fastapi
 uvicorn[standard]
 pymongo
+python-dotenvfastapi
+uvicorn[standard]
+pymongo
 python-dotenv
+email-validator
+bcrypt

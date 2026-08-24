@@ -4,6 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.database import close_mongodb_connection, connect_to_mongodb
+from app.routers.auth import router as auth_router
 
 
 @asynccontextmanager
@@ -31,18 +32,4 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-@app.get("/", tags=["Health"])
-async def root():
-    return {
-        "message": "Travel Management API is running.",
-        "database": "MongoDB Atlas",
-    }
-
-
-@app.get("/health", tags=["Health"])
-async def health_check():
-    return {
-        "status": "ok",
-        "service": "travel-management-backend",
-    }
+app.include_router(auth_router)
