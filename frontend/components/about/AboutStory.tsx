@@ -22,7 +22,7 @@ export default function AboutStory() {
         <img
           src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=1200&q=80"
           alt="Travel planning team"
-          className="h-full min-h-[320px] w-full object-cover"
+          className="h-full min-h-80 w-full object-cover"
         />
       </div>
     </section>
